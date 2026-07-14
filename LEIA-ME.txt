@@ -1,0 +1,37 @@
+LANDING PAGE — PROSPECÇÃO PELO WHATSAPP
+Autor: Adrian Cole
+Preço configurado: R$ 29,90
+
+ARQUIVOS
+- index.html: landing page completa e responsiva.
+- politica-de-privacidade.html: modelo básico de política.
+- termos-de-uso.html: modelo básico de termos.
+- assets/capa-prospeccao-whatsapp.webp: capa otimizada para carregamento.
+- assets/capa-prospeccao-whatsapp.png: capa original e imagem de compartilhamento.
+
+QUATRO AJUSTES ANTES DE PUBLICAR
+1. LINK DO CHECKOUT
+   No final do index.html, encontre:
+   checkoutUrl: 'COLE_AQUI_O_LINK_DO_CHECKOUT'
+   Cole o endereço real entre as aspas. Essa única linha configura todos os botões.
+
+2. DOMÍNIO
+   No início do index.html, substitua https://SEU-DOMINIO.com.br/ pelo endereço definitivo.
+
+3. E-MAIL
+   Substitua SEU-EMAIL@EXEMPLO.COM nos três arquivos pelo e-mail de suporte.
+
+4. REVISÃO DAS PÁGINAS LEGAIS
+   Os textos incluídos são modelos básicos. Ajuste-os à plataforma de checkout, ferramentas de anúncios,
+   cookies e funcionamento real da operação antes de publicar.
+
+PUBLICAÇÃO
+A pasta inteira pode ser publicada no Vercel, Netlify, GitHub Pages ou hospedagem tradicional.
+Mantenha a estrutura index.html + páginas legais + pasta assets.
+
+TRÁFEGO PAGO
+O código já possui ganchos opcionais para os eventos InitiateCheckout (Meta) e begin_checkout (Google).
+Eles só serão disparados depois que as respectivas tags forem corretamente instaladas.
+
+TECNOLOGIA
+Não usa bibliotecas externas. CSS e JavaScript estão dentro do index.html.
