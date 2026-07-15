@@ -1,37 +1,41 @@
 LANDING PAGE — PROSPECÇÃO PELO WHATSAPP
-Autor: Adrian Cole
-Preço configurado: R$ 29,90
+============================================
 
-ARQUIVOS
-- index.html: landing page completa e responsiva.
-- politica-de-privacidade.html: modelo básico de política.
-- termos-de-uso.html: modelo básico de termos.
-- assets/capa-prospeccao-whatsapp.webp: capa otimizada para carregamento.
-- assets/capa-prospeccao-whatsapp.png: capa original e imagem de compartilhamento.
+VERSÃO COM META PIXEL E CONSENTIMENTO DE COOKIES
 
-QUATRO AJUSTES ANTES DE PUBLICAR
-1. LINK DO CHECKOUT
-   No final do index.html, encontre:
-   checkoutUrl: 'COLE_AQUI_O_LINK_DO_CHECKOUT'
-   Cole o endereço real entre as aspas. Essa única linha configura todos os botões.
+Arquivos:
+- index.html: página principal
+- politica-de-privacidade.html: política atualizada
+- termos-de-uso.html: termos atualizados
+- assets/: imagens da capa
 
-2. DOMÍNIO
-   No início do index.html, substitua https://SEU-DOMINIO.com.br/ pelo endereço definitivo.
+Configurações aplicadas:
+- Site: https://proswhatsapp.vercel.app/
+- Checkout Hotmart: https://pay.hotmart.com/V106743631P
+- Meta Pixel: 2538560796559763
+- Evento após consentimento: PageView
+- Evento ao clicar em comprar: InitiateCheckout
+- Valor do evento: 29.90 BRL
 
-3. E-MAIL
-   Substitua SEU-EMAIL@EXEMPLO.COM nos três arquivos pelo e-mail de suporte.
+PRIVACIDADE
+O Pixel só é carregado depois que o visitante clica em “Aceitar cookies”.
+A opção escolhida é lembrada no navegador. O link “Preferências de cookies”
+no rodapé permite alterar a decisão.
 
-4. REVISÃO DAS PÁGINAS LEGAIS
-   Os textos incluídos são modelos básicos. Ajuste-os à plataforma de checkout, ferramentas de anúncios,
-   cookies e funcionamento real da operação antes de publicar.
+COMO PUBLICAR NA VERCEL
+1. Substitua todos os arquivos da versão atualmente publicada pelos arquivos desta pasta.
+2. Mantenha a pasta assets ao lado do index.html.
+3. Faça o novo deploy.
+4. Limpe o cache ou abra a página em janela anônima.
 
-PUBLICAÇÃO
-A pasta inteira pode ser publicada no Vercel, Netlify, GitHub Pages ou hospedagem tradicional.
-Mantenha a estrutura index.html + páginas legais + pasta assets.
+COMO TESTAR
+1. Abra o Gerenciador de Eventos da Meta > Testar eventos.
+2. Acesse https://proswhatsapp.vercel.app/ em janela anônima.
+3. Antes de aceitar, o PageView não deve aparecer.
+4. Clique em “Aceitar cookies”; o PageView deve aparecer.
+5. Clique em um botão de compra; o InitiateCheckout deve aparecer.
+6. Teste “Recusar não essenciais”; o Pixel não deverá ser carregado em novas visitas.
 
-TRÁFEGO PAGO
-O código já possui ganchos opcionais para os eventos InitiateCheckout (Meta) e begin_checkout (Google).
-Eles só serão disparados depois que as respectivas tags forem corretamente instaladas.
-
-TECNOLOGIA
-Não usa bibliotecas externas. CSS e JavaScript estão dentro do index.html.
+IMPORTANTE
+A venda aprovada (Purchase) deve ser configurada na Hotmart usando o mesmo ID
+do Pixel. Não adicione Purchase nesta landing page, pois ela não confirma o pagamento.

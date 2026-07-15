@@ -16,13 +16,13 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Prospecção pelo WhatsApp | Adrian Cole">
   <meta property="og:description" content="Um guia direto para iniciar conversas, gerar oportunidades e conquistar clientes sem parecer invasivo.">
-  <meta property="og:image" content="assets/capa-prospeccao-whatsapp.png">
+  <meta property="og:image" content="https://proswhatsapp.vercel.app/assets/capa-prospeccao-whatsapp.png">
   <meta property="og:url" content="https://proswhatsapp.vercel.app/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Prospecção pelo WhatsApp | Adrian Cole">
   <meta name="twitter:description" content="Método prático de prospecção pelo WhatsApp por R$ 29,90.">
-  <meta name="twitter:image" content="assets/capa-prospeccao-whatsapp.png">
+  <meta name="twitter:image" content="https://proswhatsapp.vercel.app/assets/capa-prospeccao-whatsapp.png">
 
   <link rel="preload" as="image" href="assets/capa-prospeccao-whatsapp.png">
 
@@ -37,13 +37,15 @@
     },
     "inLanguage": "pt-BR",
     "bookFormat": "https://schema.org/EBook",
-    "image": "assets/capa-prospeccao-whatsapp.png",
+    "image": "https://proswhatsapp.vercel.app/assets/capa-prospeccao-whatsapp.png",
+    "url": "https://proswhatsapp.vercel.app/",
     "description": "Como iniciar conversas, gerar oportunidades e conquistar clientes sem parecer invasivo.",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "BRL",
       "price": "29.90",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "url": "https://pay.hotmart.com/V106743631P"
     }
   }
   </script>
@@ -838,6 +840,83 @@
     .footer-links a { text-decoration: none; }
     .footer-links a:hover { color: var(--green-800); }
 
+
+
+    .cookie-banner {
+      position: fixed;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2200;
+      width: min(calc(100% - 36px), 940px);
+      margin-inline: auto;
+      padding: 22px;
+      border: 1px solid rgba(219, 229, 221, .95);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, .98);
+      box-shadow: 0 24px 70px rgba(17, 24, 39, .22);
+      backdrop-filter: blur(16px);
+    }
+
+    .cookie-banner[hidden] { display: none; }
+
+    .cookie-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .cookie-copy h2 {
+      margin: 0 0 7px;
+      font-size: 1.08rem;
+      letter-spacing: -.02em;
+    }
+
+    .cookie-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.55;
+    }
+
+    .cookie-copy a {
+      color: var(--green-800);
+      font-weight: 800;
+    }
+
+    .cookie-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .cookie-actions .btn {
+      min-height: 46px;
+      padding-inline: 20px;
+      white-space: nowrap;
+    }
+
+    .cookie-reject {
+      color: #263244;
+      background: #f3f6f4;
+      border: 1px solid var(--line);
+    }
+
+    .cookie-link {
+      padding: 0;
+      border: 0;
+      color: inherit;
+      background: transparent;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .cookie-link:hover { color: var(--green-800); }
+    body.cookie-banner-open .mobile-buy { display: none !important; }
+
     .mobile-buy {
       position: fixed;
       left: 14px;
@@ -931,8 +1010,16 @@
       }
       .seal, .author-initials { margin-inline: auto; }
       .footer-grid { flex-direction: column; text-align: center; }
-      .mobile-buy { display: flex; }
+  
+
+    .mobile-buy { display: flex; }
       footer { padding-bottom: 112px; }
+
+      .cookie-banner { left: 10px; right: 10px; bottom: 10px; width: calc(100% - 20px); padding: 18px; border-radius: 18px; }
+      .cookie-inner { grid-template-columns: 1fr; gap: 16px; }
+      .cookie-actions { display: grid; grid-template-columns: 1fr; width: 100%; }
+      .cookie-actions .btn { width: 100%; }
+
     }
   </style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
@@ -951,7 +1038,7 @@
         <a href="#conteudo-do-ebook">Conteúdo</a>
         <a href="#para-quem">Para quem é</a>
         <a href="#duvidas">Dúvidas</a>
-        <a class="btn btn-primary" data-checkout href="#comprar">Comprar por R$ 29,90</a>
+        <a class="btn btn-primary" data-checkout href="https://pay.hotmart.com/V106743631P">Comprar por R$ 29,90</a>
       </nav>
     </div>
   </header>
@@ -968,7 +1055,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" data-checkout href="#comprar">
+            <a class="btn btn-primary btn-lg" data-checkout href="https://pay.hotmart.com/V106743631P">
               Quero o e-book por R$ 29,90
               <span aria-hidden="true">→</span>
             </a>
@@ -1179,7 +1266,7 @@
               <li><span class="check" aria-hidden="true">✓</span><span>Conteúdo direto, exemplos e plano de ação</span></li>
             </ul>
 
-            <a class="btn btn-primary btn-lg" data-checkout href="#comprar">
+            <a class="btn btn-primary btn-lg" data-checkout href="https://pay.hotmart.com/V106743631P">
               Comprar agora por R$ 29,90
               <span aria-hidden="true">→</span>
             </a>
@@ -1280,7 +1367,7 @@
         <p class="section-kicker">Dê o próximo passo</p>
         <h2>Comece a prospectar com mais organização, contexto e profissionalismo</h2>
         <p>Tenha uma estrutura para sair do improviso e transformar contatos em conversas comerciais melhores.</p>
-        <a class="btn btn-primary btn-lg" data-checkout href="#comprar">
+        <a class="btn btn-primary btn-lg" data-checkout href="https://pay.hotmart.com/V106743631P">
           Quero o e-book por R$ 29,90
           <span aria-hidden="true">→</span>
         </a>
@@ -1295,25 +1382,118 @@
         <!-- Páginas legais básicas incluídas no pacote -->
         <a href="politica-de-privacidade.html">Política de Privacidade</a>
         <a href="termos-de-uso.html">Termos de Uso</a>
-        <a href="mailto:adriancolelivros@outlook.com">Suporte</a>
+        <button class="cookie-link" type="button" data-cookie-settings>Preferências de cookies</button>
       </div>
     </div>
   </footer>
 
   <div class="mobile-buy" aria-label="Comprar e-book">
     <div><small>E-book digital</small><strong>R$ 29,90</strong></div>
-    <a class="btn btn-primary" data-checkout href="#comprar">Comprar</a>
+    <a class="btn btn-primary" data-checkout href="https://pay.hotmart.com/V106743631P">Comprar</a>
   </div>
 
+
+  <section class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-title" aria-describedby="cookie-description" hidden>
+    <div class="cookie-inner">
+      <div class="cookie-copy">
+        <h2 id="cookie-title">Sua privacidade importa</h2>
+        <p id="cookie-description">
+          Usamos armazenamento essencial para lembrar sua escolha. Com sua autorização, o Meta Pixel mede visitas e cliques no checkout para melhorar os anúncios.
+          Consulte a <a href="politica-de-privacidade.html">Política de Privacidade</a>.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn cookie-reject" type="button" id="cookie-reject">Recusar não essenciais</button>
+        <button class="btn btn-primary" type="button" id="cookie-accept">Aceitar cookies</button>
+      </div>
+    </div>
+  </section>
+
   <script>
-    /* ============================================================
-       CONFIGURAÇÃO OBRIGATÓRIA ANTES DE PUBLICAR
-       Cole abaixo o link real do checkout. Esta é a única linha que
-       controla todos os botões de compra da página.
-       ============================================================ */
     const CONFIG = {
-      checkoutUrl: 'https://pay.hotmart.com/V106743631P'
+      checkoutUrl: 'https://pay.hotmart.com/V106743631P',
+      metaPixelId: '2538560796559763',
+      productName: 'Prospecção pelo WhatsApp',
+      productValue: 29.90,
+      currency: 'BRL'
     };
+
+    const CONSENT_KEY = 'proswhatsapp_cookie_consent_v1';
+    let metaPixelLoaded = false;
+
+    function readConsent() {
+      try { return localStorage.getItem(CONSENT_KEY); }
+      catch (_) { return null; }
+    }
+
+    function saveConsent(value) {
+      try { localStorage.setItem(CONSENT_KEY, value); }
+      catch (_) { /* Navegador sem armazenamento disponível. */ }
+    }
+
+    function loadMetaPixel() {
+      if (metaPixelLoaded || !CONFIG.metaPixelId) return;
+
+      !function(f,b,e,v,n,t,s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = true;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+      window.fbq('init', CONFIG.metaPixelId);
+      window.fbq('track', 'PageView');
+      metaPixelLoaded = true;
+    }
+
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieReject = document.getElementById('cookie-reject');
+
+    function openCookiePreferences() {
+      cookieBanner.hidden = false;
+      document.body.classList.add('cookie-banner-open');
+      window.setTimeout(() => cookieAccept.focus(), 50);
+    }
+
+    function closeCookiePreferences() {
+      cookieBanner.hidden = true;
+      document.body.classList.remove('cookie-banner-open');
+    }
+
+    cookieAccept.addEventListener('click', () => {
+      saveConsent('accepted');
+      loadMetaPixel();
+      closeCookiePreferences();
+    });
+
+    cookieReject.addEventListener('click', () => {
+      const pixelWasActive = metaPixelLoaded;
+      saveConsent('rejected');
+      closeCookiePreferences();
+
+      // Um script já carregado não pode ser removido com segurança. Ao alterar
+      // de aceito para recusado, recarregamos a página sem iniciar o Pixel.
+      if (pixelWasActive) window.location.reload();
+    });
+
+    document.querySelectorAll('[data-cookie-settings]').forEach((button) => {
+      button.addEventListener('click', openCookiePreferences);
+    });
+
+    const savedConsent = readConsent();
+    if (savedConsent === 'accepted') loadMetaPixel();
+    if (savedConsent !== 'accepted' && savedConsent !== 'rejected') openCookiePreferences();
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -1325,35 +1505,35 @@
       });
     });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+      document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+    } else {
+      document.querySelectorAll('.reveal').forEach((element) => element.classList.add('visible'));
+    }
 
     document.querySelectorAll('[data-checkout]').forEach((link) => {
-      if (CONFIG.checkoutUrl && !CONFIG.checkoutUrl.includes('COLE_AQUI')) {
-        link.href = CONFIG.checkoutUrl;
-        link.target = '_blank';
-        link.rel = 'noopener sponsored';
-      }
+      link.href = CONFIG.checkoutUrl;
+      link.target = '_blank';
+      link.rel = 'noopener sponsored';
 
-      link.addEventListener('click', (event) => {
-        if (!CONFIG.checkoutUrl || CONFIG.checkoutUrl.includes('COLE_AQUI')) {
-          event.preventDefault();
-          document.querySelector('#comprar').scrollIntoView({ behavior: 'smooth' });
-          alert('Configure o link do checkout na constante CONFIG, no final do arquivo index.html.');
-          return;
+      link.addEventListener('click', () => {
+        if (metaPixelLoaded && typeof window.fbq === 'function') {
+          window.fbq('track', 'InitiateCheckout', {
+            content_name: CONFIG.productName,
+            content_type: 'product',
+            value: CONFIG.productValue,
+            currency: CONFIG.currency
+          });
         }
-
-        // Ganchos opcionais de rastreamento: só executam se as tags estiverem instaladas.
-        if (typeof window.fbq === 'function') window.fbq('track', 'InitiateCheckout', { value: 29.90, currency: 'BRL' });
-        if (typeof window.gtag === 'function') window.gtag('event', 'begin_checkout', { value: 29.90, currency: 'BRL' });
       });
     });
   </script>
