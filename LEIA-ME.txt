@@ -1,7 +1,7 @@
 LANDING PAGE — PROSPECÇÃO PELO WHATSAPP
 ============================================
 
-VERSÃO COM META PIXEL E CONSENTIMENTO DE COOKIES
+VERSÃO COM META PIXEL, CONSENTIMENTO DE COOKIES E HOTMART
 
 Arquivos:
 - index.html: página principal
@@ -13,14 +13,18 @@ Configurações aplicadas:
 - Site: https://proswhatsapp.vercel.app/
 - Checkout Hotmart: https://pay.hotmart.com/V106743631P
 - Meta Pixel: 2538560796559763
-- Evento após consentimento: PageView
-- Evento ao clicar em comprar: InitiateCheckout
-- Valor do evento: 29.90 BRL
+- Evento na landing page após consentimento: PageView
+- Eventos no checkout da Hotmart: InitiateCheckout e Purchase
 
 PRIVACIDADE
-O Pixel só é carregado depois que o visitante clica em “Aceitar cookies”.
+O Pixel da landing page só é carregado depois que o visitante clica em “Aceitar cookies”.
 A opção escolhida é lembrada no navegador. O link “Preferências de cookies”
 no rodapé permite alterar a decisão.
+
+EVITANDO EVENTOS DUPLICADOS
+O evento InitiateCheckout foi removido do HTML da landing page.
+A Hotmart passa a registrar InitiateCheckout quando o checkout é carregado e Purchase
+quando a compra é aprovada, conforme a integração WEB/API de Conversões configurada.
 
 COMO PUBLICAR NA VERCEL
 1. Substitua todos os arquivos da versão atualmente publicada pelos arquivos desta pasta.
@@ -28,14 +32,15 @@ COMO PUBLICAR NA VERCEL
 3. Faça o novo deploy.
 4. Limpe o cache ou abra a página em janela anônima.
 
-COMO TESTAR
+COMO TESTAR A LANDING PAGE
 1. Abra o Gerenciador de Eventos da Meta > Testar eventos.
 2. Acesse https://proswhatsapp.vercel.app/ em janela anônima.
 3. Antes de aceitar, o PageView não deve aparecer.
 4. Clique em “Aceitar cookies”; o PageView deve aparecer.
-5. Clique em um botão de compra; o InitiateCheckout deve aparecer.
-6. Teste “Recusar não essenciais”; o Pixel não deverá ser carregado em novas visitas.
+5. Clique em um botão de compra e confirme que o checkout da Hotmart abre normalmente.
+6. O InitiateCheckout deverá ser enviado pela Hotmart, não pela landing page.
+7. Teste “Recusar não essenciais”; o Pixel não deverá ser carregado em novas visitas.
 
 IMPORTANTE
-A venda aprovada (Purchase) deve ser configurada na Hotmart usando o mesmo ID
-do Pixel. Não adicione Purchase nesta landing page, pois ela não confirma o pagamento.
+Não adicione InitiateCheckout nem Purchase novamente ao index.html.
+A landing page não confirma pagamento; por isso o Purchase deve permanecer na Hotmart.

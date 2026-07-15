@@ -1398,7 +1398,7 @@
       <div class="cookie-copy">
         <h2 id="cookie-title">Sua privacidade importa</h2>
         <p id="cookie-description">
-          Usamos armazenamento essencial para lembrar sua escolha. Com sua autorização, o Meta Pixel mede visitas e cliques no checkout para melhorar os anúncios.
+          Usamos armazenamento essencial para lembrar sua escolha. Com sua autorização, o Meta Pixel mede visitas à página para ajudar a avaliar e melhorar os anúncios.
           Consulte a <a href="politica-de-privacidade.html">Política de Privacidade</a>.
         </p>
       </div>
@@ -1412,10 +1412,7 @@
   <script>
     const CONFIG = {
       checkoutUrl: 'https://pay.hotmart.com/V106743631P',
-      metaPixelId: '2538560796559763',
-      productName: 'Prospecção pelo WhatsApp',
-      productValue: 29.90,
-      currency: 'BRL'
+      metaPixelId: '2538560796559763'
     };
 
     const CONSENT_KEY = 'proswhatsapp_cookie_consent_v1';
@@ -1524,17 +1521,6 @@
       link.href = CONFIG.checkoutUrl;
       link.target = '_blank';
       link.rel = 'noopener sponsored';
-
-      link.addEventListener('click', () => {
-        if (metaPixelLoaded && typeof window.fbq === 'function') {
-          window.fbq('track', 'InitiateCheckout', {
-            content_name: CONFIG.productName,
-            content_type: 'product',
-            value: CONFIG.productValue,
-            currency: CONFIG.currency
-          });
-        }
-      });
     });
   </script>
 </body>
