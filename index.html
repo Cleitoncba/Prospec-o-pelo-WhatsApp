@@ -1081,6 +1081,173 @@
       .cookie-actions .btn { width: 100%; }
 
     }
+
+
+    /* Hero com mulher profissional — responsivo */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+      grid-template-areas:
+        "intro visual"
+        "details visual";
+      align-items: center;
+      column-gap: 48px;
+      row-gap: 18px;
+    }
+
+    .hero-intro {
+      grid-area: intro;
+      align-self: end;
+      min-width: 0;
+    }
+
+    .hero-details {
+      grid-area: details;
+      align-self: start;
+      min-width: 0;
+    }
+
+    .hero-intro h1 {
+      max-width: 720px;
+      margin-bottom: 0;
+      font-size: clamp(2.8rem, 4.65vw, 4.45rem);
+      line-height: .99;
+    }
+
+    .hero-details > p {
+      max-width: 660px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+    }
+
+    .hero-visual {
+      grid-area: visual;
+      position: relative;
+      min-height: 570px;
+      overflow: hidden;
+      border: 1px solid rgba(219, 229, 221, .9);
+      border-radius: 34px;
+      background: linear-gradient(145deg, #ffffff, #f4fbf6);
+      box-shadow: 0 28px 75px rgba(5, 46, 22, .14);
+      isolation: isolate;
+    }
+
+    .hero-person {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 66% center;
+    }
+
+    .hero-visual .price-card-float {
+      right: 20px;
+      bottom: 24px;
+      z-index: 3;
+      min-width: 158px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, .86fr);
+        grid-template-areas:
+          "intro visual"
+          "details visual";
+        column-gap: 30px;
+      }
+
+      .hero-intro h1 {
+        font-size: clamp(2.55rem, 5.6vw, 3.7rem);
+      }
+
+      .hero-visual {
+        min-height: 510px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding-top: 42px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "intro"
+          "visual"
+          "details";
+        row-gap: 26px;
+      }
+
+      .hero-intro,
+      .hero-details {
+        text-align: center;
+      }
+
+      .hero-intro h1 {
+        max-width: 620px;
+        margin-inline: auto;
+        font-size: clamp(2.35rem, 11.7vw, 3.35rem);
+        line-height: 1.01;
+      }
+
+      .hero-details > p {
+        margin-inline: auto;
+        font-size: 1.05rem;
+      }
+
+      .hero-visual {
+        width: min(100%, 560px);
+        min-height: 450px;
+        margin-inline: auto;
+        border-radius: 28px;
+      }
+
+      .hero-person {
+        object-position: 65% center;
+      }
+
+      .hero-visual .price-card-float {
+        right: 14px;
+        bottom: 16px;
+        min-width: 142px;
+        padding: 13px 14px;
+      }
+
+      .hero-visual .price-card-float strong {
+        font-size: 1.5rem;
+      }
+
+      .hero-actions,
+      .microcopy {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .hero-intro h1 {
+        font-size: clamp(2.12rem, 11.2vw, 2.82rem);
+      }
+
+      .hero-visual {
+        min-height: 390px;
+      }
+
+      .hero-person {
+        object-position: 64% center;
+      }
+
+      .hero-visual .price-card-float {
+        min-width: 128px;
+      }
+
+      .hero-visual .price-card-float .limited-note {
+        font-size: .69rem;
+      }
+    }
+
   </style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -1106,9 +1273,12 @@
   <main id="conteudo">
     <section class="hero" id="inicio">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <!-- <span class="eyebrow">E-book prático de prospecção</span> -->
+        <div class="hero-intro reveal">
+         <!-- <span class="eyebrow">E-book prático de prospecção</span> -->
           <h1>Transforme o WhatsApp em um canal de <span>oportunidades reais</span></h1>
+        </div>
+
+        <div class="hero-details reveal">
           <p>
             Aprenda a iniciar conversas, apresentar seu serviço e acompanhar potenciais clientes
             com profissionalismo — sem mensagens genéricas, pressão ou abordagem invasiva.
@@ -1129,12 +1299,10 @@
           </div>
         </div>
 
-        <div class="book-stage reveal" aria-label="Capa do e-book Prospecção pelo WhatsApp">
-          <div class="book-glow" aria-hidden="true"></div>
-          <figure class="book">
-            <picture><source srcset="assets/capa-prospeccao-whatsapp.webp" type="image/webp"><img src="assets/capa-prospeccao-whatsapp.png" width="1055" height="1491" alt="Capa do e-book Prospecção pelo WhatsApp, de Cleiton Bastos"></picture>
-          </figure>
-          <div class="price-card-float" aria-label="Preço do e-book">
+        <div class="hero-visual reveal" aria-label="Profissional utilizando o WhatsApp">
+          <img class="hero-person" src="retrato-profissional-whatsapp.webp" width="1086" height="1448" alt="Mulher profissional sorrindo e segurando um smartphone.">
+
+          <div class="price-card-float" aria-label="Preço promocional do e-book">
             <small class="old-price">De R$ 59,90</small>
             <strong>R$ 29,90</strong>
             <span class="limited-note">Por tempo limitado</span>
@@ -1302,27 +1470,27 @@
     <section class="section-soft" id="feedbacks">
       <div class="container">
         <div class="section-head reveal">
-          <!--<p class="section-kicker">Feedbacks simulados no WhatsApp</p> -->
+         <!-- <p class="section-kicker">Exemplos de aplicação no WhatsApp</p> -->
           <h2>Veja exemplos de retornos positivos após aplicar o método</h2>
-          <p>
-           <!-- Abaixo, você confere 3 conversas simuladas com nomes fictícios, mostrando como uma abordagem
-            mais clara e estratégica pode melhorar as respostas e gerar oportunidades reais.
+          <!-- <p>
+            Veja três conversas ilustrativas que mostram como uma abordagem mais clara e estratégica
+            pode melhorar as respostas e gerar oportunidades reais.
           </p> -->
         </div>
 
         <div class="feedback-grid">
           <figure class="feedback-card reveal">
-            <img src="conversa-whatsapp-rafael-mendes.png" loading="lazy" alt="Conversa simulada no WhatsApp com Rafael Mendes dando feedback positivo sobre o e-book.">
+            <img src="conversa-whatsapp-rafael-mendes.png" loading="lazy" alt="Conversa ilustrativa no WhatsApp com Rafael Mendes dando feedback positivo sobre o e-book.">
             <figcaption>Rafael Mendes relata mais respostas, 2 conversas com clientes e uma abordagem mais profissional.</figcaption>
           </figure>
 
           <figure class="feedback-card reveal">
-            <img src="conversa-whatsapp-juliana-costa.png" loading="lazy" alt="Conversa simulada no WhatsApp com Juliana Costa dando feedback positivo sobre o e-book.">
+            <img src="conversa-whatsapp-juliana-costa.png" loading="lazy" alt="Conversa ilustrativa no WhatsApp com Juliana Costa dando feedback positivo sobre o e-book.">
             <figcaption>Juliana Costa conta que aplicou o follow-up do método, reativou um contato e conseguiu marcar uma reunião.</figcaption>
           </figure>
 
           <figure class="feedback-card reveal">
-            <img src="conversa-whatsapp-bruno-ferreira.png" loading="lazy" alt="Conversa simulada no WhatsApp com Bruno Ferreira dando feedback positivo sobre o e-book.">
+            <img src="conversa-whatsapp-bruno-ferreira.png" loading="lazy" alt="Conversa ilustrativa no WhatsApp com Bruno Ferreira dando feedback positivo sobre o e-book.">
             <figcaption>Bruno Ferreira diz que usou o roteiro com 5 contatos, obteve 3 respostas e já gerou um orçamento.</figcaption>
           </figure>
         </div>
